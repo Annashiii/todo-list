@@ -7,7 +7,7 @@ export default function TodoList({toDoList, handleToggle}) {
         <div className='list'>
             {toDoList.map(todo => {
                 return(
-                    <ToDo todo={todo} handleToggle={handleToggle} />
+                    <ToDo todo={todo} handleToggle={handleToggle}/>
                 )
             })}
             

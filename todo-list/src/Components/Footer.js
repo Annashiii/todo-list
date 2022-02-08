@@ -1,10 +1,18 @@
 import React from 'react'
 
-export default function Footer() {
+export default function Footer({todoList, handleFilter}) {
+    
+    const filteredList = todoList.filter(todo => {
+        return !todo.complete
+    });
+
     return(
         <div className='footer'>
-        <p>4 Tasks</p>
-        <p className='add'>ADD NEW +</p>
+        <p class='length'>{filteredList.length} tasks</p>
+        <div className='btn-container'>
+        <button className='a-button' onClick={handleFilter}>Clear Completed</button>
+        </div>
+        <p className='add btn-container'>+</p>
         </div>
     )
 }

@@ -8,8 +8,9 @@ export default function ToDo({todo, handleToggle}) {
         handleToggle(e.currentTarget.id)
     }
 
+    
     return (
-        <div id={todo.id} onClick={handleClick} className={todo.complete? 'strike':""}>
+        <div id={todo.id} onClick={handleClick} className={`todo-list ${todo.complete? 'strike':""}`} >
             {todo.task}
         </div>
     );
