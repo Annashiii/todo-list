@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Input, Button, Box} from '@chakra-ui/react'
 
 export default function Form({addTask, handleClose}) {
 
@@ -17,13 +18,14 @@ export default function Form({addTask, handleClose}) {
     }
 
 return(
-    <div>
+    <div className='form-container'>
         <form onSubmit={handleSubmit}>
         
-        <input value={userInput} type="text" name="task-input" onChange={handleChange} 
+        <Input value={userInput} type="text" name="task-input" onChange={handleChange} 
         placeholder="Walk The Cat"/>
-        
-        <button>Submit</button>
+        <Box ml='300px' mt='15px'>
+        <Button type='submit'>Submit</Button>
+        </Box>
         </form>
     </div>
 )}

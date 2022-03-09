@@ -8,10 +8,6 @@ body{
   height: 100%;
   display: flex;
   justify-content: center;
-  background: rgb(255,236,210);
-  background: linear-gradient(131deg, rgba(255,236,210,1) 0%, rgba(252,182,159,1) 51%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 code {
